@@ -1,0 +1,6 @@
+[submodule "dbcontext"]
+	path = dbcontext
+	url = git@gitlab.com:hango/DBContext.git
+[submodule "dbrecycleview"]
+	path = dbrecycleview
+	url = git@gitlab.com:hango/dbrecycleview.git

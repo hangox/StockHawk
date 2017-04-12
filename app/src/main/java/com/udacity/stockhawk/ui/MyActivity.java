@@ -13,5 +13,5 @@ import com.hangox.databinding.context.BindingActivity;
  * 这个应用的服Activity
  */
 
-public class MyActivity<V extends ViewDataBinding> extends BindingActivity<V> {
+public abstract class MyActivity<V extends ViewDataBinding> extends BindingActivity<V> {
 }

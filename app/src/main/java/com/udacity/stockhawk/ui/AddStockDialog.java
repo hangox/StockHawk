@@ -6,23 +6,22 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.DialogInterface;
+import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import com.udacity.stockhawk.R;
-
-
+import com.udacity.stockhawk.databinding.AddStockDialogBinding;
 
 
 public class AddStockDialog extends DialogFragment {
 
-    EditText stock;
+    AddStockDialogBinding mBinding;
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
@@ -31,9 +30,10 @@ public class AddStockDialog extends DialogFragment {
 
         LayoutInflater inflater = LayoutInflater.from(getActivity());
         @SuppressLint("InflateParams") View custom = inflater.inflate(R.layout.add_stock_dialog, null);
+        mBinding = DataBindingUtil.findBinding(custom);
 
 
-        stock.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+        mBinding.dialogStock.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 addStock();
@@ -64,7 +64,7 @@ public class AddStockDialog extends DialogFragment {
     private void addStock() {
         Activity parent = getActivity();
         if (parent instanceof MainActivity) {
-            ((MainActivity) parent).addStock(stock.getText().toString());
+            ((MainActivity) parent).addStock(mBinding.dialogStock.getText().toString());
         }
         dismissAllowingStateLoss();
     }

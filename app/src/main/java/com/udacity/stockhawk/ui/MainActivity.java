@@ -44,11 +44,11 @@ public class MainActivity extends MyActivity<ActivityMainBinding> implements Loa
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setUpView();
+
         adapter = new StockAdapter(this, this);
         stockRecyclerView.setAdapter(adapter);
         stockRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-
         swipeRefreshLayout.setOnRefreshListener(this);
         swipeRefreshLayout.setRefreshing(true);
         onRefresh();
@@ -70,6 +70,22 @@ public class MainActivity extends MyActivity<ActivityMainBinding> implements Loa
             }
         }).attachToRecyclerView(stockRecyclerView);
 
+    }
+
+    @Override
+    protected boolean isShowNavigationUp() {
+        return false;
+    }
+
+    @Override
+    protected int provideLayoutId() {
+        return R.layout.activity_main;
+    }
+
+    private void setUpView() {
+        stockRecyclerView = mDataBinding.recyclerView;
+        swipeRefreshLayout = mDataBinding.swipeRefresh;
+        error = mDataBinding.error;
     }
 
     private boolean networkUp() {

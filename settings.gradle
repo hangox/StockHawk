@@ -1,1 +1,1 @@
-include ':app', ':dbcontext', ':dbrecycleview'
+include ':app'

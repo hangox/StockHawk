@@ -165,8 +165,10 @@ public class MainActivity extends MyActivity<ActivityMainBinding> implements Loa
         if (PrefUtils.getDisplayMode(this)
                 .equals(getString(R.string.pref_display_mode_absolute_key))) {
             item.setIcon(R.drawable.ic_percentage);
+            item.setTitle(R.string.cd_percentage_model);
         } else {
             item.setIcon(R.drawable.ic_dollar);
+            item.setTitle(R.string.cd_dollar_model);
         }
     }
 

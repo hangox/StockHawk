@@ -63,7 +63,7 @@ dependencies {
     compile "com.android.support:recyclerview-v7:${supportVersion}"
     compile "com.android.support:design:${supportVersion}"
     compile 'com.google.guava:guava:20.0'
-    compile 'com.yahoofinance-api:YahooFinanceAPI:3.5.0'
+    compile 'com.yahoofinance-api:YahooFinanceAPI:3.6.1'
     compile 'com.jakewharton.timber:timber:4.4.0'
 //    compile project(":dbcontext")
 //    compile project(":dbrecycleview")

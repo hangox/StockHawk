@@ -41,6 +41,9 @@ class StockAdapter extends RecyclerView.Adapter<StockAdapter.StockViewHolder> {
         percentageFormat.setPositivePrefix("+");
     }
 
+
+
+
     void setCursor(Cursor cursor) {
         this.cursor = cursor;
         notifyDataSetChanged();
@@ -98,7 +101,7 @@ class StockAdapter extends RecyclerView.Adapter<StockAdapter.StockViewHolder> {
 
 
     interface StockAdapterOnClickHandler {
-        void onClick(String symbol);
+        void onClick(String symbol, String history);
     }
 
     class StockViewHolder extends BindingViewHolder<ListItemQuoteBinding> implements View.OnClickListener {
@@ -106,6 +109,7 @@ class StockAdapter extends RecyclerView.Adapter<StockAdapter.StockViewHolder> {
 
         public StockViewHolder(@LayoutRes int layoutId, ViewGroup parent) {
             super(layoutId, parent);
+            itemView.setOnClickListener(this);
         }
 
 
@@ -114,7 +118,9 @@ class StockAdapter extends RecyclerView.Adapter<StockAdapter.StockViewHolder> {
             int adapterPosition = getAdapterPosition();
             cursor.moveToPosition(adapterPosition);
             int symbolColumn = cursor.getColumnIndex(Contract.Quote.COLUMN_SYMBOL);
-            clickHandler.onClick(cursor.getString(symbolColumn));
+            int historyColumn = cursor.getColumnIndex(Contract.Quote.COLUMN_HISTORY);
+
+            clickHandler.onClick(cursor.getString(symbolColumn),cursor.getString(historyColumn));
 
         }
 

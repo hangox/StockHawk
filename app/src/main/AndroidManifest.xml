@@ -41,7 +41,7 @@
         <activity android:name=".ui.StockHistoryActivity">
         </activity>
 
-        <receiver android:name=".ui.MyAppWidgetProvider">
+        <receiver android:name=".ui.StockListAppWidgetProvider">
             <intent-filter>
                 <action android:name="${applicationId}.action.UPDATE"/>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>

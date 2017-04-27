@@ -107,6 +107,7 @@ class StockItemRemoteViewFactory implements RemoteViewsService.RemoteViewsFactor
         remoteViews.setTextViewText(R.id.change,displayText);
         Timber.d("display %s",mCursor.getString(Contract.Quote.POSITION_SYMBOL));
 
+        //设定Action
         Intent intent = new Intent();
         intent.putExtra("symbol",mCursor.getString(Contract.Quote.POSITION_SYMBOL));
         intent.putExtra("history",mCursor.getString(Contract.Quote.POSITION_HISTORY));

@@ -105,6 +105,9 @@ class StockItemRemoteViewFactory implements RemoteViewsService.RemoteViewsFactor
             displayText = percentageFormat.format(percentageChange / 100);
         }
         remoteViews.setTextViewText(R.id.change,displayText);
+        remoteViews.setTextColor(R.id.change,rawAbsoluteChange > 0 ?
+                mContext.getResources().getColor(R.color.material_green_700):
+        mContext.getResources().getColor(R.color.material_red_700));
         Timber.d("display %s",mCursor.getString(Contract.Quote.POSITION_SYMBOL));
 
         //设定Action

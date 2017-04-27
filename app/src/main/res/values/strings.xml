@@ -35,5 +35,6 @@
     <string name="cd_add_stock">add stock</string>
     <string name="cd_percentage_model">change to percentage model</string>
     <string name="cd_dollar_model">change to dollar model</string>
+    <string name="loading">加载中</string>
 
 </resources>

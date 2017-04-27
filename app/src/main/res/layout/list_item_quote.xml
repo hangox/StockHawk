@@ -5,6 +5,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
+        android:id="@+id/item"
         android:layout_height="?android:attr/listPreferredItemHeight"
         android:background="@drawable/bg_item_click"
         android:gravity="center_vertical"
@@ -39,7 +40,7 @@
                 style="@style/PercentChangeTextStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/percent_change_pill_green"
+                tools:background="@drawable/percent_change_pill_green"
                 android:paddingLeft="3dp"
                 android:paddingRight="3dp"
                 tools:text="100%"/>

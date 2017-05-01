@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">股票雄鹰</string>
+
+
+    <string name="dialog_title">添加股票</string>
+    <string name="dialog_cancel">取消</string>
+    <string name="dialog_add">添加</string>
+
+    <string name="error_no_network">无网络连接！将会在网络可用的时候加载股票信息</string>
+    <string name="error_no_stocks">没有添加股票！请通过添加按钮添加</string>
+
+    <string name="toast_stock_added_no_connectivity">符号 %s 已经添加。将会在网络可用时候刷新</string>
+    <string name="toast_no_connectivity">将会在网络可用时候刷新</string>
+    <string name="cd_add_stock">添加股票</string>
+    <string name="cd_percentage_model">切换到百分比模式</string>
+    <string name="cd_dollar_model">切换到美元模式</string>
+    <string name="loading">加载中</string>
+    <string name="error_no_network_out_date">无网络连接！股票信息可能已经过期</string>
+</resources>

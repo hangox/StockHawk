@@ -35,6 +35,7 @@
     <string name="cd_add_stock">add stock</string>
     <string name="cd_percentage_model">change to percentage model</string>
     <string name="cd_dollar_model">change to dollar model</string>
-    <string name="loading">加载中</string>
+    <string name="loading">loading</string>
+    <string name="error_no_network_out_date">No network connectivity! stock maybe out date</string>
 
 </resources>

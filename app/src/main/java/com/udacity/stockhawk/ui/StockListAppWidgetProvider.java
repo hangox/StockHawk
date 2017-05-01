@@ -50,7 +50,7 @@ public class StockListAppWidgetProvider extends AppWidgetProvider {
     public void onReceive(Context context, Intent intent) {
         super.onReceive(context, intent);
         String action = intent.getAction();
-        if (QuoteIntentService.NOTIFICY_UPDATE.equals(action)) {
+        if (QuoteIntentService.NOTIFY_UPDATE.equals(action)) {
             AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(context);
             int[] appWidgetIds = appWidgetManager.getAppWidgetIds(
                     new ComponentName(context, getClass()));

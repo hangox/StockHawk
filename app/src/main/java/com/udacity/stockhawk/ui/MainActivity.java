@@ -154,6 +154,9 @@ public class MainActivity extends MyActivity<ActivityMainBinding> implements Loa
 
         if (data.getCount() != 0) {
             error.setVisibility(View.GONE);
+            if(!networkUp()){
+                Toast.makeText(MainActivity.this,R.string.error_no_network_out_date,Toast.LENGTH_LONG).show();
+            }
         }
         adapter.setCursor(data);
     }

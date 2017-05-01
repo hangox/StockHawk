@@ -9,7 +9,7 @@ import timber.log.Timber;
 
 
 public class QuoteIntentService extends IntentService {
-    public static final String NOTIFICY_UPDATE = BuildConfig.APPLICATION_ID +"action.UPDATE";
+    public static final String NOTIFICY_UPDATE = BuildConfig.APPLICATION_ID +".action.UPDATE";
 
     public QuoteIntentService() {
         super(QuoteIntentService.class.getSimpleName());
